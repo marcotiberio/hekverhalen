@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>#hekverhalen</title>
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalenfavicon.png">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <!-- bootstrap -->
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		overflow: hidden;
+	}
+
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+    
+  #myVideo1{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+    
+  #myVideo2{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+
+
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	.section .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+
+	/* Hiding video controls
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	video::-webkit-media-controls {
+	  display:none !important;
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+  <div class="title"><a href="https://www.instagram.com/hekverhalen/" target="_blank">#hekverhalen</a></div>
+  <button type="button" class="btn btn-primary shadow-none" id="about" data-toggle="modal" data-target="#aboutModal">
+  about
+  </button>
+
+  <div class="footer"><a href="gallery.html">gallery</a></div>
+
+<!-- Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel"></h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        De mens heeft al millennia lang de drang om zijn territorium af te bakenen. Waar het vroeger vooral voor bescherming van buiten af was, is het hedendaags in het urbane landschap de vraag waar het alom gebruikte tuinhek voor dient?
+<br>
+Welke argumentatie gebruikt men tegenwoordig bij het kiezen van een tuinhek? Is het enkel een esthetische keuze? Houd het de honden en katten buiten of juist binnen? Of is het om de erfgrens visueel te maken? En zijn er daarnaast nog redenen voor de keuzen van een erfafscheiding? 
+<br>
+In dit archief gaan wij op pad voor u om mensen te bevragen over het verhaal wat schuil gaat achter hun hek: hekverhalen.
+<br>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+ 
+<!-- <nav class="navbar navbar-light">
+  <a class="navbar-brand" href="https://www.instagram.com/hekverhalen/" target="_blank">#hekverhalen</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">about <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">exhibition</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+
+<div id="fullpage">
+	<div class="section" id="section0">
+    <video id="myVideo" playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen01_webready.mp4" type="video/mp4">
+		</video>
+		<div class="layer">
+      <p><a href="videoplayer_ben.html" class="title_hek">VAN HEGGE</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo1" playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen06_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_vanloenen.html" class="title_hek">MENEER VAN LOENEN</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen05_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_key.html" class="title_hek">KEY</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen02_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_keep.html" class="title_hek">KEEP</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen03_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_porsche.html" class="title_hek">PORSCHE</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen04_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_netjes.html" class="title_hek">NETJES</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen07_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_hondenhek.html" class="title_hek">HONDENHEK</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen09_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_moerman.html" class="title_hek">MOERMAN</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen10_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_oranje.html" class="title_hek">ORANJE</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen11_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_meijer.html" class="title_hek">MEIJER</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen12_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_dijk.html" class="title_hek">DIJK</a></p>
+		</div>
+  </div>
+  
+  <div class="section" id="section0">
+    <video id="myVideo2"  playsinline loop muted data-autoplay>
+			<source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1734469/hekverhalen13_webready.mp4" type="video/mp4">
+		</video>
+    <div class="layer">
+			<p><a href="videoplayer_heuvel.html" class="title_hek">HEUVEL</a></p>
+		</div>
+  </div>
+  
+</div>
+  
+  
+<script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript" src="examples.js"></script>
+  
+<!--SCRIPTS LINKS-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<!--SCRIPTS LINKS-->
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        verticalCentered: true,
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+    });
+</script>
+
+</body>
+</html>
