@@ -474,7 +474,7 @@
 
                 css(section, {'height': windowsHeight + 'px'});
 
-                //adjusting the position fo the FULL WIDTH slides...
+                //adjusting the position fo the FULL WIDTH slideshttps://marcotiberio.github.io/hekverhalen.
                 if (slides.length > 1) {
                     landscapeScroll(slidesWrap, $(SLIDE_ACTIVE_SEL, slidesWrap)[0]);
                 }
@@ -621,7 +621,7 @@
 
         function bindEvents(){
 
-            //when scrolling...
+            //when scrollinghttps://marcotiberio.github.io/hekverhalen.
             window.addEventListener('scroll', scrollHandler);
 
             //detecting any change on the URL to scroll to the given anchor link
@@ -631,7 +631,7 @@
             //when opening a new tab (ctrl + t), `control` won't be pressed when coming back.
             window.addEventListener('blur', blurHandler);
 
-            //when resizing the site, we adjust the heights of the sections, slimScroll...
+            //when resizing the site, we adjust the heights of the sections, slimScrollhttps://marcotiberio.github.io/hekverhalen.
             window.addEventListener('resize', resizeHandler);
 
             //Sliding with arrow keys, both, vertical and horizontal
@@ -1037,7 +1037,7 @@
         var isScrolling = false;
         var lastScroll = 0;
 
-        //when scrolling...
+        //when scrollinghttps://marcotiberio.github.io/hekverhalen.
         function scrollHandler(){
             var currentSection;
 
@@ -1267,7 +1267,7 @@
                 touchEndY = touchEvents.y;
                 touchEndX = touchEvents.x;
 
-                //if movement in the X axys is greater than in the Y and the currect section has slides...
+                //if movement in the X axys is greater than in the Y and the currect section has slideshttps://marcotiberio.github.io/hekverhalen.
                 if ($(SLIDES_WRAPPER_SEL, activeSection).length && Math.abs(touchStartX - touchEndX) > (Math.abs(touchStartY - touchEndY))) {
 
                     //is the movement greater than the minimum resistance to scroll?
@@ -1398,7 +1398,7 @@
                     var averageMiddle = getAverage(scrollings, 70);
                     var isAccelerating = averageEnd >= averageMiddle;
 
-                    //to avoid double swipes...
+                    //to avoid double swipeshttps://marcotiberio.github.io/hekverhalen.
                     if(isAccelerating && isScrollingVertically){
                         //scrolling down?
                         if (delta < 0) {
@@ -2422,7 +2422,7 @@
 
         var previousHeight = windowsHeight;
 
-        //when resizing the site, we adjust the heights of the sections, slimScroll...
+        //when resizing the site, we adjust the heights of the sections, slimScrollhttps://marcotiberio.github.io/hekverhalen.
         function resizeHandler(){
             //checking if it needs to get responsive
             responsive();
@@ -2736,7 +2736,7 @@
             if(options.recordHistory){
                 location.hash = url;
             }else{
-                //Mobile Chrome doesn't work the normal way, so... lets use HTML5 for phones :)
+                //Mobile Chrome doesn't work the normal way, sohttps://marcotiberio.github.io/hekverhalen. lets use HTML5 for phones :)
                 if(isTouchDevice || isTouch){
                     window.history.replaceState(undefined, undefined, '#' + url);
                 }else{
